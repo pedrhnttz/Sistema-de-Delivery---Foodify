@@ -1,0 +1,373 @@
+/* OVERLAY */
+
+.my-restaurant-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* POPUP PRINCIPAL */
+
+.my-restaurant-popup {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 900px;
+  height: 680px;
+
+  max-width: 100%;
+  max-height: calc(100dvh - 40px);
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background: var(--color-white, #fff);
+  border-radius: 5px;
+  color: var(--color-text, #222);
+}
+
+/* CABEÇALHO FIXO */
+
+.my-restaurant-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  min-height: 80px;
+  padding: 0 24px;
+  flex-shrink: 0;
+
+  border-bottom: 1px solid var(--color-border, #ddd);
+}
+
+.my-restaurant-header h2 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 600;
+
+  overflow-wrap: anywhere;
+}
+
+.my-restaurant-close {
+  border: 0;
+  background: transparent;
+
+  color: var(--color-primary, #16834b);
+  font-size: 32px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* CONTEÚDO COM ROLAGEM */
+
+.my-restaurant-body {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 26px 24px 35px;
+  box-sizing: border-box;
+
+  scrollbar-width: thin;
+}
+
+/* SEÇÕES E DIVISÓRIAS */
+
+.my-restaurant-section {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid var(--color-border, #ddd);
+}
+
+.my-restaurant-section h3 {
+  margin: 0 0 20px;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* CAMPOS EDITÁVEIS */
+
+.my-restaurant-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 17px 20px;
+}
+
+.my-restaurant-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  font-size: 13px;
+  color: var(--color-text-secondary, #666);
+}
+
+.my-restaurant-field input,
+.my-restaurant-table input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 4px;
+
+  background: #fff;
+  color: var(--color-text, #222);
+
+  font: inherit;
+  font-size: 14px;
+}
+
+.my-restaurant-field input:focus,
+.my-restaurant-table input:focus {
+  outline: 2px solid var(--color-primary, #16834b);
+  outline-offset: 1px;
+}
+
+/* TABELA DO CARDÁPIO */
+
+.my-restaurant-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.my-restaurant-table {
+  width: 100%;
+
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.my-restaurant-table th {
+  padding: 8px 6px;
+
+  text-align: left;
+  font-size: 13px;
+
+  color: var(--color-text-secondary, #666);
+}
+
+.my-restaurant-table th:nth-child(2) {
+  width: 160px;
+}
+
+.my-restaurant-table th:nth-child(3) {
+  width: 45px;
+}
+
+.my-restaurant-table td {
+  padding: 6px;
+}
+
+.my-restaurant-table input {
+  height: 40px;
+}
+
+/* BOTÃO REMOVER PRODUTO */
+
+.my-restaurant-remove {
+  width: 32px;
+  height: 32px;
+
+  border: 0;
+  background: transparent;
+
+  color: #b32323;
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+/* BOTÃO ADICIONAR PRODUTO */
+
+.my-restaurant-add {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 15px;
+
+  border: 0;
+  background: transparent;
+
+  color: var(--color-primary, #16834b);
+
+  font: inherit;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.my-restaurant-add img {
+  width: 28px;
+  height: 28px;
+
+  object-fit: contain;
+}
+
+.my-restaurant-add-hover {
+  display: none;
+}
+
+.my-restaurant-add:hover .my-restaurant-add-normal {
+  display: none;
+}
+
+.my-restaurant-add:hover .my-restaurant-add-hover {
+  display: block;
+}
+
+/* EXCLUIR RESTAURANTE */
+
+.my-restaurant-danger-zone {
+  margin: 0;
+  padding-bottom: 0;
+
+  border: 0;
+}
+
+.my-restaurant-delete {
+  padding: 12px 18px;
+
+  border: 1px solid #b32323;
+  border-radius: 4px;
+
+  background: #fff;
+  color: #b32323;
+
+  font: inherit;
+  cursor: pointer;
+}
+
+.my-restaurant-delete:hover {
+  background: #fff1f1;
+}
+
+/* RODAPÉ FIXO */
+
+.my-restaurant-footer {
+  flex-shrink: 0;
+
+  padding: 20px 24px;
+
+  border-top: 1px solid var(--color-border, #ddd);
+  background: var(--color-white, #fff);
+}
+
+.my-restaurant-save {
+  width: 100%;
+  height: 50px;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: var(--color-primary, #16834b);
+  color: #fff;
+
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.my-restaurant-save:hover {
+  filter: brightness(0.93);
+}
+
+/* MENSAGENS DE ERRO */
+
+.my-restaurant-error {
+  padding: 10px;
+
+  border: 1px solid #e5baba;
+  border-radius: 4px;
+
+  background: #fff6f6;
+  color: #a11;
+}
+
+.my-restaurant-muted {
+  font-size: 13px;
+  color: #777;
+}
+
+/* MODAL DE CONFIRMAÇÃO */
+
+.my-restaurant-confirm-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.my-restaurant-confirm {
+  max-width: 390px;
+  padding: 25px;
+
+  background: #fff;
+  border-radius: 6px;
+
+  box-shadow: 0 6px 20px #0002;
+}
+
+.my-restaurant-confirm h3 {
+  margin-top: 0;
+}
+
+.my-restaurant-confirm p {
+  line-height: 1.5;
+}
+
+.my-restaurant-confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.my-restaurant-confirm-actions > button:first-child {
+  padding: 10px 18px;
+
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  background: #fff;
+
+  cursor: pointer;
+}
+
+/* BOTÕES DESABILITADOS */
+
+.my-restaurant-popup button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

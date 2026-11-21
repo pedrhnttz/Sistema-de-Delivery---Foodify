@@ -1,0 +1,90 @@
+.welcome-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 3.4%;
+  box-sizing: border-box;
+  background-color: #164d35;
+}
+
+.welcome-card {
+  width: 400px;
+  padding: 35px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-card h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.welcome-description {
+  margin: 10px 0 28px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-text-secondary);
+}
+
+.welcome-login-button {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 11px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.welcome-login-button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.welcome-divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 30px;
+  background-color: #dddddd;
+}
+
+.welcome-register-text {
+  margin-top: 23px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.welcome-register-text a {
+  color: #269b62;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .welcome-page {
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .welcome-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

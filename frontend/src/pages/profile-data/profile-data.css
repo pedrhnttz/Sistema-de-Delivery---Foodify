@@ -1,0 +1,90 @@
+.profile-data-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+.profile-data-content {
+  flex: 1;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 38px 24px 70px;
+  box-sizing: border-box;
+}
+
+.profile-data-content h1 {
+  margin: 0 0 38px;
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: var(--font-semibold);
+}
+
+.profile-data-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-data-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  width: 100%;
+  min-height: 72px;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile-data-option-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.profile-data-option-title {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+}
+
+.profile-data-option-description {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.profile-data-chevron {
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.profile-data-option:hover .profile-data-option-title {
+  color: var(--color-primary);
+}
+
+.profile-data-option:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* EXCLUSÃO DA CONTA */
+
+.profile-data-option-danger .profile-data-option-title,
+.profile-data-option-danger .profile-data-chevron {
+  color: var(--color-error);
+}
+
+.profile-data-option-danger:hover .profile-data-option-title {
+  text-decoration: underline;
+}

@@ -1,0 +1,267 @@
+/* OVERLAY */
+
+.location-popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* CONTAINER PRINCIPAL */
+
+.location-popup-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  max-width: calc(100vw - 40px);
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 60px 30px;
+}
+
+/* BOTÃO FECHAR */
+
+.location-popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* IMAGEM PRINCIPAL */
+
+.location-popup-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* TÍTULO */
+
+.location-popup-box h2 {
+  text-align: center;
+  margin: 15px 0 25px;
+}
+
+/* LISTA DE ENDEREÇOS */
+
+.location-popup-addresses {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 12px;
+}
+
+/* CARD DO ENDEREÇO */
+
+.location-popup-address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 80px;
+  padding: 14px 16px;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ENDEREÇO SELECIONADO */
+
+.location-popup-address.selected {
+  border-color: var(--color-primary);
+}
+
+/* HOVER DO CARD */
+
+.location-popup-address:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* CONTAINER DOS ÍCONES */
+
+.location-popup-address-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+/* ÍCONE DE LOCALIZAÇÃO */
+
+.location-popup-local-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* BOTÕES EDITAR E EXCLUIR */
+
+.location-popup-icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.location-popup-icon-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.location-popup-icon-button:hover {
+  transform: scale(1.15);
+}
+
+/* CONTEÚDO DO ENDEREÇO */
+
+.location-popup-address-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.location-popup-address-content strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.location-popup-address-street {
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.location-popup-address-details {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+/* TRÊS PONTINHOS */
+
+.location-popup-actions-toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 24px;
+  height: 32px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.location-popup-actions-toggle span {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--color-gray);
+  transition: background-color 0.2s ease;
+}
+
+/* TRÊS PONTINHOS ATIVADOS */
+
+.location-popup-actions-toggle.active span {
+  background-color: var(--color-primary);
+}
+
+/* BOTÃO ADICIONAR */
+
+.location-popup-add {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-top: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.location-popup-add img {
+  position: absolute;
+  inset: 0;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.location-popup-add-normal {
+  opacity: 1;
+}
+
+.location-popup-add-hover {
+  opacity: 0;
+}
+
+.location-popup-add:hover .location-popup-add-normal {
+  opacity: 0;
+}
+
+.location-popup-add:hover .location-popup-add-hover {
+  opacity: 1;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .location-popup-box {
+    padding: 45px 16px 30px;
+  }
+
+  .location-popup-address {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .location-popup-address-icons {
+    gap: 8px;
+  }
+
+  .location-popup-local-icon,
+  .location-popup-icon-button,
+  .location-popup-icon-button img {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,516 @@
+
+/* =========================================
+   PÁGINA DO RESTAURANTE
+========================================= */
+
+.restaurant-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+.restaurant-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.restaurant-status {
+  flex: 1;
+  min-height: 300px;
+  padding: 40px 4%;
+}
+
+
+/* =========================================
+   BANNER DO RESTAURANTE
+========================================= */
+
+.restaurant-banner {
+  width: 100%;
+  height: 220px;
+  margin-top: 30px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #eeeeee;
+}
+
+.restaurant-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* =========================================
+   IDENTIFICAÇÃO DO RESTAURANTE
+========================================= */
+
+.restaurant-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 25px 0;
+}
+
+.restaurant-identity {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 18px;
+  min-width: 0;
+}
+
+/* Logo circular */
+
+.restaurant-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+}
+
+.restaurant-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nome e categoria */
+
+.restaurant-name {
+  min-width: 0;
+}
+
+.restaurant-name h1 {
+  margin: 0 0 7px;
+  color: var(--color-black);
+  font-size: 24px;
+  font-weight: var(--font-bold);
+  line-height: 1.3;
+}
+
+.restaurant-name p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+
+/* =========================================
+   FAVORITOS - RESTAURANTE E PRODUTOS
+========================================= */
+
+/*
+  Estados:
+  Normal: favorite-icon.png
+  Hover: favorite-icon-hover.png
+  Ativo: favorite-icon-true.png
+
+  O JSX controla qual imagem será exibida
+  conforme o estado do favorito.
+*/
+
+.restaurant-favorite-button,
+.product-favorite-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Favorito do restaurante */
+
+.restaurant-favorite-button {
+  width: 42px;
+  height: 42px;
+}
+
+/* Favorito do produto */
+
+.product-favorite-button {
+  width: 26px;
+  height: 26px;
+}
+
+/* Ícone normal ou selecionado */
+
+.restaurant-favorite-button .favorite-icon-normal,
+.product-favorite-button .favorite-icon-normal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+}
+
+/* Ícone de hover */
+
+.restaurant-favorite-button .favorite-icon-hover,
+.product-favorite-button .favorite-icon-hover {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Hover somente quando não estiver favoritado */
+
+.restaurant-favorite-button:not(.active):hover
+.favorite-icon-normal,
+.product-favorite-button:not(.active):hover
+.favorite-icon-normal {
+  opacity: 0;
+}
+
+.restaurant-favorite-button:not(.active):hover
+.favorite-icon-hover,
+.product-favorite-button:not(.active):hover
+.favorite-icon-hover {
+  opacity: 1;
+}
+
+/* Selecionado: mantém favorite-icon-true */
+
+.restaurant-favorite-button.active
+.favorite-icon-normal,
+.product-favorite-button.active
+.favorite-icon-normal {
+  opacity: 1;
+}
+
+/* Impede troca de imagem no hover quando ativo */
+
+.restaurant-favorite-button.active:hover
+.favorite-icon-normal,
+.product-favorite-button.active:hover
+.favorite-icon-normal {
+  opacity: 1;
+}
+
+/* Botão desabilitado durante requisição */
+
+.restaurant-favorite-button:disabled,
+.product-favorite-button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+/* Acessibilidade */
+
+.restaurant-favorite-button:focus-visible,
+.product-favorite-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Mensagem de erro */
+
+.restaurant-favorite-error {
+  margin: 0 0 15px;
+  color: var(--color-error);
+  font-size: 13px;
+}
+
+
+/* =========================================
+   BARRA DE PESQUISA E FRETE
+========================================= */
+
+.restaurant-toolbar {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  padding-bottom: 30px;
+}
+
+/* Pesquisa */
+
+.restaurant-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Ícone search.png */
+
+.restaurant-search-icon {
+  position: absolute;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* Campo de pesquisa */
+
+.restaurant-search input {
+  width: 100%;
+  height: 64px;
+  padding: 0 20px 0 54px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+
+  background: var(--color-white);
+  color: var(--color-text);
+
+  font-family: inherit;
+  font-size: 14px;
+
+  transition: border-color 0.2s ease;
+}
+
+.restaurant-search input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.restaurant-search input:focus {
+  border-color: var(--color-primary);
+}
+
+
+/* =========================================
+   CARD DE DISTÂNCIA E FRETE
+========================================= */
+
+.restaurant-delivery-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+
+  width: 280px;
+  min-height: 64px;
+  padding: 10px 16px;
+
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  background: var(--color-white);
+}
+
+.restaurant-delivery-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 0;
+}
+
+.restaurant-delivery-label {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.restaurant-delivery-detail strong {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+  white-space: nowrap;
+}
+
+.restaurant-delivery-detail strong.restaurant-delivery-free {
+  color: var(--color-success, #15965c);
+}
+
+/* Divisor entre distância e frete */
+
+.restaurant-delivery-divider {
+  width: 1px;
+  height: 32px;
+  flex-shrink: 0;
+  background: var(--color-border);
+}
+
+
+/* =========================================
+   DIVISOR DO CARDÁPIO
+========================================= */
+
+.restaurant-divider {
+  width: 100%;
+  height: 20px;
+  background-color: #eeeeee;
+}
+
+
+/* =========================================
+   CARDÁPIO
+========================================= */
+
+.restaurant-menu {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0 60px;
+  box-sizing: border-box;
+}
+
+.restaurant-menu h2 {
+  margin: 0 0 20px;
+  color: var(--color-black);
+  font-size: 22px;
+  font-weight: var(--font-bold);
+}
+
+
+/* =========================================
+   GRID DE PRODUTOS
+========================================= */
+
+.restaurant-products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+
+/* =========================================
+   CARD DO PRODUTO
+========================================= */
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  min-width: 0;
+  min-height: 170px;
+  padding: 18px;
+
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+
+  background: var(--color-white);
+  cursor: pointer;
+
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.09);
+}
+
+.product-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   INFORMAÇÕES DO PRODUTO
+========================================= */
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  flex: 1;
+  min-width: 0;
+  gap: 12px;
+}
+
+/* Nome e favorito na mesma linha */
+
+.product-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.product-title-row h3 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+
+  color: var(--color-black);
+  font-size: 15px;
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+}
+
+/* Descrição */
+
+.product-info p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Preço */
+
+.product-info strong {
+  margin-top: auto;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: var(--font-semibold);
+}
+
+
+/* IMAGEM DO PRODUTO */
+
+.product-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 140px;
+  height: 115px;
+  flex-shrink: 0;
+
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* SEM RESULTADOS */
+
+.no-products {
+  grid-column: 1 / -1;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}

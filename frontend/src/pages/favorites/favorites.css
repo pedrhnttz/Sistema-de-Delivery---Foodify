@@ -1,0 +1,202 @@
+/* PÁGINA */
+
+.favorites-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+.favorites-content {
+  width: 100%;
+  max-width: 1200px;
+  flex: 1;
+  margin: 0 auto;
+  padding: 35px 0 70px;
+  box-sizing: border-box;
+}
+
+.favorites-page-title {
+  margin: 0 0 35px;
+  font-size: 26px;
+  font-weight: var(--font-bold);
+  color: var(--color-black);
+}
+
+/* SEÇÕES VERTICAIS */
+
+.favorites-section {
+  margin-bottom: 35px;
+}
+
+.favorites-section h2 {
+  margin: 0 0 20px;
+  font-size: 21px;
+  font-weight: var(--font-bold);
+  color: var(--color-black);
+}
+
+.favorites-divider {
+  height: 1px;
+  margin: 35px 0;
+  background-color: var(--color-border);
+}
+
+/* GRID */
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+
+.favorites-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  min-height: 155px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.favorites-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.favorites-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* IMAGEM CINZA */
+
+.favorites-card-image {
+  width: 125px;
+  height: 115px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #eeeeee;
+}
+
+/* INFORMAÇÕES */
+
+.favorites-card-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 10px;
+}
+
+.favorites-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.favorites-card-title-row h3 {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  color: var(--color-black);
+  font-size: 16px;
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+}
+
+.favorites-card-info p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.favorites-card-detail {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.favorites-card-price {
+  color: var(--color-primary);
+  font-size: 15px;
+  font-weight: var(--font-semibold);
+}
+
+/* BOTÃO DE REMOVER FAVORITO */
+
+.favorites-remove-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.favorites-remove-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.favorites-icon-true {
+  display: block;
+  opacity: 1;
+}
+
+.favorites-icon-remove {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* HOVER: ÍCONE DE REMOÇÃO */
+
+.favorites-remove-button:hover .favorites-icon-true {
+  opacity: 0;
+}
+
+.favorites-remove-button:hover .favorites-icon-remove {
+  opacity: 1;
+}
+
+.favorites-remove-button:disabled {
+  opacity: 0.4;
+  cursor: wait;
+}
+
+.favorites-remove-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* MENSAGENS */
+
+.favorites-message {
+  margin: 0;
+  padding: 25px 0;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.favorites-error {
+  margin-bottom: 20px;
+  color: var(--color-error, #d93025);
+  font-size: 14px;
+}

@@ -1,0 +1,224 @@
+
+/* ==========================================
+   PÁGINA
+========================================== */
+
+.order-details-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.order-details-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+  flex: 1;
+}
+
+.order-details-content h1 {
+  margin: 12px 0 24px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #252525;
+}
+
+.order-details-back {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #ea1d2c;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.order-details-error {
+  color: #d71920;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.order-details-card {
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.order-details-card h2 {
+  margin: 0 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #252525;
+}
+
+/* ==========================================
+   RESTAURANTE
+========================================== */
+
+.order-details-restaurant {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-details-avatar {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f5f5f5;
+  font-size: 28px;
+}
+
+.order-details-restaurant h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.order-details-restaurant p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ==========================================
+   ACOMPANHAMENTO
+========================================== */
+
+.order-details-tracking {
+  padding-top: 24px;
+}
+
+.order-details-tracking h3 {
+  margin: 0 0 22px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-details-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.order-details-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+  min-height: 48px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.order-details-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 16px;
+  width: 2px;
+  height: 30px;
+  background: #e5e5e5;
+}
+
+.order-details-step-dot {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.order-details-step.completed {
+  color: #252525;
+  font-weight: 500;
+}
+
+.order-details-step.completed .order-details-step-dot,
+.order-details-step.completed:not(:last-child)::after {
+  background: #50a773;
+}
+
+/* ==========================================
+   PRODUTOS E VALORES
+========================================== */
+
+.order-details-items {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-details-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.order-details-item strong {
+  color: #252525;
+  white-space: nowrap;
+}
+
+.order-details-totals {
+  padding-top: 16px;
+}
+
+.order-details-totals > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.order-details-totals .order-details-total {
+  margin-top: 20px;
+  margin-bottom: 0;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+  font-size: 17px;
+  color: #252525;
+}
+
+/* ==========================================
+   ENDEREÇO E PAGAMENTO
+========================================== */
+
+.order-details-address p,
+.order-details-card > p {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 768px) {
+  .order-details-content {
+    padding: 24px 16px 60px;
+  }
+
+  .order-details-card {
+    padding: 18px;
+  }
+
+  .order-details-content h1 {
+    font-size: 22px;
+  }
+}

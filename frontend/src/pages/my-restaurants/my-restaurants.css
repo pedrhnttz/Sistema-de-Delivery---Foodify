@@ -1,0 +1,198 @@
+.my-restaurants-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-white, #fff);
+}
+
+.my-restaurants-content {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 42px 24px 80px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.my-restaurants-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.my-restaurants-heading h1 {
+  margin: 0;
+  color: var(--color-text, #333);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.my-restaurants-create {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0 20px;
+
+  border: 1px solid var(--color-primary, #16834b);
+  border-radius: 4px;
+
+  background: var(--color-primary, #16834b);
+  color: #fff;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.my-restaurants-create:hover:not(:disabled) {
+  filter: brightness(0.93);
+}
+
+.my-restaurants-create:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.my-restaurants-divider {
+  height: 1px;
+  margin: 25px 0 28px;
+  background: var(--color-border, #e5e5e5);
+}
+
+.my-restaurants-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-restaurants-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 4px;
+
+  border-bottom: 1px solid var(--color-border, #e5e5e5);
+}
+
+.my-restaurants-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  background: #edf7ee;
+  color: var(--color-primary);
+
+  font-size: 26px;
+}
+
+.my-restaurants-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.my-restaurants-info h2 {
+  margin: 0 0 6px;
+  color: var(--color-text, #333);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.my-restaurants-info p {
+  margin: 0;
+  color: var(--color-text-secondary, #777);
+  font-size: 13px;
+}
+
+.my-restaurants-view {
+  padding: 10px 16px;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--color-primary);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.my-restaurants-view:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.my-restaurants-message,
+.my-restaurants-error {
+  margin: 30px 0;
+  font-size: 14px;
+}
+
+.my-restaurants-message {
+  color: var(--color-text-secondary, #777);
+}
+
+.my-restaurants-error {
+  color: var(--color-error, #dc2626);
+}
+
+.my-restaurants-empty {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.my-restaurants-empty h2 {
+  margin: 0 0 12px;
+  color: var(--color-text, #333);
+  font-size: 18px;
+}
+
+.my-restaurants-empty p {
+  margin: 0;
+  color: var(--color-text-secondary, #777);
+  font-size: 14px;
+}
+
+
+.my-restaurants-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.my-restaurants-options-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  padding: 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+
+  background: transparent;
+  color: var(--color-primary);
+
+  cursor: pointer;
+}
+
+.my-restaurants-options-button span {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.my-restaurants-options-button:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
