@@ -1,8 +1,8 @@
 users = [
   {
-    "id": 901,
+    "id": 1,
     "name": "ADMIN",
-    "email": "pedrohenos600@gmail.com",
-    "phone": "11945144060"
+    "email": "pedro.osantos@aluno.impacta.edu.br",
+    "phone": "11999999999"
   }
 ]

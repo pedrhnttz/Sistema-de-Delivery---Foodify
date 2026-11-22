@@ -7,7 +7,6 @@ def create_user(data):
     user = User(
         name=data["name"],
         email=data["email"],
-        password_hash=None,
         phone=data.get("phone")
     )
 
@@ -82,7 +81,6 @@ def create_google_user(name, email):
     user = User(
         name=name,
         email=email,
-        password_hash=None,
         phone=None
     )
 

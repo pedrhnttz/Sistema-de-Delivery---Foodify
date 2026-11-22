@@ -1,7 +1,7 @@
 restaurants = [
     {
-        "id": 901,
-        "user_id": 901,
+        "id": 1,
+        "user_id": 1,
         "name": "Burger House",
         "food_type": "Lanches",
         "postal_code": "00000-000",
@@ -15,8 +15,8 @@ restaurants = [
         "longitude": -46.643921
     },
     {
-        "id": 902,
-        "user_id": 901,
+        "id": 2,
+        "user_id": 1,
         "name": "Doce Encanto",
         "food_type": "Bolos & Doces",
         "postal_code": "00000-000",
@@ -30,8 +30,8 @@ restaurants = [
         "longitude": -46.641832
     },
     {
-        "id": 903,
-        "user_id": 901,
+        "id": 3,
+        "user_id": 1,
         "name": "Coxinha da Vila",
         "food_type": "Salgados",
         "postal_code": "00000-000",
@@ -45,8 +45,8 @@ restaurants = [
         "longitude": -46.642156
     },
     {
-        "id": 904,
-        "user_id": 901,
+        "id": 4,
+        "user_id": 1,
         "name": "Pão Quentinho",
         "food_type": "Padaria",
         "postal_code": "00000-000",
@@ -60,8 +60,8 @@ restaurants = [
         "longitude": -46.644012
     },
     {
-        "id": 905,
-        "user_id": 901,
+        "id": 5,
+        "user_id": 1,
         "name": "Hot Dog Express",
         "food_type": "Cachorro-Quente",
         "postal_code": "00000-000",
@@ -75,8 +75,8 @@ restaurants = [
         "longitude": -46.640987
     },
     {
-        "id": 906,
-        "user_id": 901,
+        "id": 6,
+        "user_id": 1,
         "name": "Gelato Dreams",
         "food_type": "Sorvetes",
         "postal_code": "00000-000",
@@ -90,8 +90,8 @@ restaurants = [
         "longitude": -46.641523
     },
     {
-        "id": 907,
-        "user_id": 901,
+        "id": 7,
+        "user_id": 1,
         "name": "Sakura Sushi",
         "food_type": "Japonesa",
         "postal_code": "00000-000",
@@ -105,8 +105,8 @@ restaurants = [
         "longitude": -46.644321
     },
     {
-        "id": 908,
-        "user_id": 901,
+        "id": 8,
+        "user_id": 1,
         "name": "Brasa Nobre",
         "food_type": "Carne",
         "postal_code": "00000-000",
@@ -120,8 +120,8 @@ restaurants = [
         "longitude": -46.646123
     },
     {
-        "id": 909,
-        "user_id": 901,
+        "id": 9,
+        "user_id": 1,
         "name": "China Garden",
         "food_type": "Chinesa",
         "postal_code": "00000-000",
@@ -135,8 +135,8 @@ restaurants = [
         "longitude": -46.640823
     },
     {
-        "id": 910,
-        "user_id": 901,
+        "id": 10,
+        "user_id": 1,
         "name": "Forno Italiano",
         "food_type": "Pizza",
         "postal_code": "00000-000",
@@ -150,8 +150,8 @@ restaurants = [
         "longitude": -46.643212
     },
     {
-        "id": 911,
-        "user_id": 901,
+        "id": 11,
+        "user_id": 1,
         "name": "Bella Pasta",
         "food_type": "Italiana",
         "postal_code": "00000-000",
@@ -165,8 +165,8 @@ restaurants = [
         "longitude": -46.642912
     },
     {
-        "id": 912,
-        "user_id": 901,
+        "id": 12,
+        "user_id": 1,
         "name": "Drink Lab",
         "food_type": "Bebidas",
         "postal_code": "00000-000",

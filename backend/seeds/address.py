@@ -1,7 +1,7 @@
 addresses = [
   {
-    "id": 90101,
-    "user_id": 901,
+    "id": 101,
+    "user_id": 1,
     "postal_code": "04013002",
     "street": "Rua Cubatão",
     "number":"726",
