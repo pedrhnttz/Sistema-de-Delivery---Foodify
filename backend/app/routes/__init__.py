@@ -7,3 +7,4 @@ from app.routes.orders import orders_bp
 from app.routes.auth import auth_bp
 from app.routes.health import health_bp
 from app.routes.delivery_routes import delivery_bp
+from app.routes.mobile_restaurants import mobile_restaurants_bp

@@ -13,7 +13,8 @@ from app.routes import (
     orders_bp,
     auth_bp,
     health_bp,
-    delivery_bp
+    delivery_bp,
+    mobile_restaurants_bp
 )
 
 
@@ -51,6 +52,7 @@ def create_app():
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(health_bp, url_prefix="/api/health")
     app.register_blueprint(delivery_bp, url_prefix="/api/delivery")
+    app.register_blueprint(mobile_restaurants_bp, url_prefix="/api/mobile/restaurants")
 
     with app.app_context():
         db.create_all()
